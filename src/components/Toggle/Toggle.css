@@ -1,3 +1,65 @@
 .Toggle {
-  /* --- YOUR STYLES HERE --- */
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.Toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.Slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #465D67;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 20px;
+
+}
+
+
+.Slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #FFFFFF;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+
+}
+
+
+input:checked + .Slider {
+  background-color: #D81B5D;
+;
+}
+
+input:focus + .Slider {
+  box-shadow: 0 0 1px #D81B5D;
+}
+
+input:checked + .Slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.Label {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 12px;
+
 }

@@ -1,10 +1,20 @@
 import React from "react";
 import "./Toggle.css";
 
-interface TextareaProps {}
+interface TextareaProps {
+  label: string;
+}
 
-export const Toggle = ({ ...props }: TextareaProps) => {
+export const Toggle = ({label, ...props }: TextareaProps) => {
   // --- YOUR CODE HERE ---
 
-  return <>Toggle</>;
+  return (
+    <>
+      <label className="Toggle">
+          <input type="checkbox"></input>
+          <span className="Slider"></span>
+      </label>
+      <span className="Label">{label}</span>
+    </>
+  );
 };

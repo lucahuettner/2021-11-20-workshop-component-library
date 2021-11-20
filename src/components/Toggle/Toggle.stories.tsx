@@ -12,4 +12,6 @@ export default {
 const Template: ComponentStory<typeof Toggle> = (args) => <Toggle {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  label: 'Label'
+};
